@@ -1,6 +1,6 @@
-import { LoadingTrackerEntry } from './LoadingTrackerEntry';
-import { Scenario } from '../world/Scenario';
-import { World } from '../world/World';
+import { LoadingTrackerEntry } from "./LoadingTrackerEntry";
+import { Scenario } from "../world/Scenario";
+import { World } from "../world/World";
 export declare class LoadingManager {
     firstLoad: boolean;
     onFinishedCallback: () => void;
