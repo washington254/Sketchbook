@@ -17,16 +17,6 @@
     "dev": "webpack-dev-server --config webpack.dev.js --port 8080",
     "build": "webpack --config webpack.prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/swift502/Sketchbook.git"
-  },
-  "author": "swift502 <blaha.j502@gmail.com> (http://jblaha.art/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/swift502/Sketchbook/issues"
-  },
-  "homepage": "https://github.com/swift502/Sketchbook",
   "devDependencies": {
     "@types/jquery": "^3.5.5",
     "@types/lodash": "^4.14.168",
@@ -41,9 +31,6 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@react-three/cannon": "^6.6.0",
-    "@react-three/drei": "^9.99.7",
-    "@react-three/fiber": "^8.15.19",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "sweetalert2": "^9.17.2",

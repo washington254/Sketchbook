@@ -165,22 +165,13 @@ export class World {
       this.params.Mouse_Sensitivity,
     );
     this.sky = new Sky(this);
-
     // Load scene if path is supplied
     if (worldScenePath !== undefined) {
       let loadingManager = new LoadingManager(this);
       loadingManager.onFinishedCallback = () => {
         this.update(1, 1);
         this.setTimeScale(1);
-
-        Swal.fire({
-          title: "Welcome",
-          confirmButtonText: "Okay",
-          buttonsStyling: false,
-          onClose: () => {
-            UIManager.setUserInterfaceVisible(true);
-          },
-        });
+        UIManager.setUserInterfaceVisible(true);
       };
       loadingManager.loadGLTF(worldScenePath, (gltf) => {
         this.loadScene(loadingManager, gltf);
@@ -188,12 +179,6 @@ export class World {
     } else {
       UIManager.setUserInterfaceVisible(true);
       UIManager.setLoadingScreenVisible(false);
-      Swal.fire({
-        icon: "success",
-        title: "Hello world!",
-        text: "Empty Sketchbook world was succesfully initialized. Enjoy the blueness of the sky.",
-        buttonsStyling: false,
-      });
     }
 
     this.render(this);
@@ -272,7 +257,7 @@ export class World {
    * Implements fps limiter and frame-skipping
    * Calls world's "update" function before rendering.
    * @param {World} world
-   */
+ ds */
   public render(world: World): void {
     this.requestDelta = this.clock.getDelta();
 
